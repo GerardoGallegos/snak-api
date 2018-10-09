@@ -1,0 +1,35 @@
+{
+  "name": "snak-api",
+  "version": "0.0.1",
+  "description": "",
+  "main": "build",
+  "scripts": {
+    "build": "babel src --out-dir build",
+    "start": "node build",
+    "dev": "concurrently \"babel src --out-dir build -w\" \"nodemon build\"",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [],
+  "author": "Gerardo Gallegos <puxerop@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "axios": "^0.18.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "concurrently": "^4.0.1",
+    "dotenv": "^6.1.0",
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.4",
+    "regenerator-runtime": "^0.12.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "winston": "^3.1.0"
+  }
+}
