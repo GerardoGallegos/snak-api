@@ -1,5 +1,8 @@
 # snak-api
 
+[![Build Status](https://travis-ci.org/GerardoGallegos/snak-api.svg?branch=master)](https://travis-ci.org/GerardoGallegos/snak-api)
+
+
 > API for snak ultimate
 ---
 
