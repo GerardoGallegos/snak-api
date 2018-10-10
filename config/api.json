@@ -1,0 +1,6 @@
+{
+  "paginate": {
+    "default": 20,
+    "max": 30
+  }
+}
