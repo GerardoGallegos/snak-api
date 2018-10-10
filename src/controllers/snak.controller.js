@@ -49,11 +49,14 @@ export const get = async (req, res, next) => {
 }
 
 export const create = async (req, res, next) => {
-  const snak = await Snak.create(req.body.snak)
-  res.json({ snak })
   try {
+    const author = req.user || 'anonymous'
+    const snak = await Snak.create({
+      author,
+      ...req.body.snak
+    })
+    res.json({ snak })
   } catch (error) {
-    console.log(error)
     next(error)
   }
 }

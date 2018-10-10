@@ -21,7 +21,7 @@ describe('/snaks', () => {
       })
   })
 
-  it('Create a snak', (done) => {
+  it('Create a anonymous snak', (done) => {
     const snak = {
       title: 'example snk',
       description: 'awesome snak'
@@ -31,6 +31,8 @@ describe('/snaks', () => {
       .send({ snak })
       .end((e, res) => {
         expect(res.body.snak.version).be.equal('1')
+        expect(res.body.snak.version).be.equal('1')
+        expect(res.body.snak.author).be.equal('anonymous')
         expect(res.body.snak.title).be.equal('example snk')
         expect(res.status).be.equal(200)
 
